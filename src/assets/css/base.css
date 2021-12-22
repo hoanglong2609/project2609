@@ -1,0 +1,207 @@
+:root {
+    --header-height: 80px;
+    --white-color: #fff;
+    --primary-color: #3fd0d4;
+    --text-color: #212121;
+    --height-navbar--mobile: 70px;
+  }
+  ::-webkit-scrollbar{
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,var(--primary-color));
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#00c6ff);
+  
+  }
+  * {
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Animation */
+  
+  @keyframes FadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes Growth{
+    from{
+      transform: translateY(-100%);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+  @keyframes Growth1 {
+    0%{
+      z-index: -1;
+    }
+    60%{
+      z-index: -1;
+  
+    }
+    100%{
+      z-index: 1;
+    }
+  }
+  
+  /* Arrow */
+  .arrow-right {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+  }
+  
+  /* Inner */
+  
+  .header__inner {
+    visibility: hidden;
+    position: absolute;
+    top: 53px;
+    transition: height 0.5s;
+    opacity: 0;
+    transform: translateY(-5em);
+    z-index: -1;
+    transition: all .6s ease 0s, visibility 2s linear 0s, z-index 0s linear;
+  }
+  .header__inner-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: inline-block;
+    padding: 28px 0 30px;
+    border-top: 1px solid transparent;
+    background-color: #fff;
+  }
+  
+  .header__inner-item {
+    min-width: 258px;
+    position: relative;
+  }
+  
+  .header__inner-link {
+    text-decoration: none;
+    display: inline-block;
+    float: none;
+    margin: 0;
+    padding: 5px 88px 6px 32px;
+    font-size: 1.4rem;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-shadow: 0.3px 0.3px var(--text-color);
+    transition-property: color;
+    transition-duration: 0.3s;
+    text-transform: capitalize;
+  }
+  .header__inner--ful-width {
+    height: 462.6px;
+    left: -1080.88px;
+    width: 1519px;
+    background-color: var(--white-color);
+    justify-content: center;
+    box-shadow: 0 3px 13px 0 rgb(0 0 0 / 10%);
+    transition: all .6s;
+  }
+  .header__inner--text {
+    color: var(--primary-color);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Catamaran", sans-serif;
+    font-size: 1.4rem;
+  }
+  
+  /* inner cart */
+  .header-bars--inners {
+    visibility: hidden;
+    position: absolute;
+    top: 53px;
+    opacity: 0;
+    transform: translateY(-5em);
+    z-index: -1;
+    transition: all 0s ease 0s, visibility 2s linear 0s, z-index 0s linear;
+  }
+  
+  /* btn */
+  .btn {
+    font-size: 1.6rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--white-color);
+    padding: 16px 72px 12px;
+    height: 82px;
+    border: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1em;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: .4s;
+  }
+  .btn:hover{
+    color: #fff;
+    background-color: #23a9af;
+  }
+  .icon-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .icon-close i {
+    font-size: 4.4rem;
+    color: var(--white-color);
+  }
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.2);
+    display: none;
+    animation: FadeIn .3s linear;
+    cursor: pointer;
+  }
+  .nav__mobile-overlay{
+    position: fixed;
+    top: var(--height-navbar--mobile);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.2);
+    animation: FadeIn .3s linear ;
+    cursor: default;
+    display: none;
+    z-index: 1;
+  }
+  .header__mobile-login-overlay{
+    position: fixed;
+    top: var(--height-navbar--mobile);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.9);
+    animation: FadeIn .3s linear ;
+    cursor: default;
+    display: none;
+    z-index: 1;
+  }
+  
+  
